@@ -1,0 +1,131 @@
+/* ===== 1. RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3748;
+}
+
+/* ===== 2. LAYOUT ===== */
+/* Each section is a white card, centered on the page */
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0 auto 20px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== 3. COMPONENTS ===== */
+
+/* Subject input row */
+#subject-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#subject-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+
+/* Timer display — the hero of the app */
+#timer-display {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  color: #2d3748;
+  margin: 20px 0;
+  letter-spacing: 4px;
+}
+
+/* All buttons share this base style */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* ===== 4. STATES ===== */
+button:hover {
+  background-color: #357abd;
+}
+
+#stop-btn {
+  background-color: #e53e3e;
+}
+
+#stop-btn:hover {
+  background-color: #c53030;
+}
+
+/* ===== 5. LIST STYLES ===== */
+#subject-list, #session-log {
+  list-style: none;
+  margin-top: 16px;
+  width: 100%;
+}
+
+#session-log li {
+  padding: 10px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+#subject-list li:hover {
+  background: #ebf4ff;
+}
+
+#total-time {
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+#subject-list li {
+  padding: 10px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;                   /* added */
+  justify-content: space-between;  /* added */
+  align-items: center;             /* added */
+}
+
+.delete-btn {
+  background: transparent;
+  color: #e53e3e;
+  font-size: 16px;
+  padding: 2px 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn:hover {
+  background: #fed7d7;
+  border-radius: 4px;
+}
